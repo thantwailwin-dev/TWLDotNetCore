@@ -43,7 +43,10 @@ foreach (DataRow dr in dt.Rows)
 /*adoDotNetExample.Delete(13);*/
 /*adoDotNetExample.Edit(2);*/
 
-DapperExample dapperExample = new DapperExample();
-dapperExample.Run();
+/*DapperExample dapperExample = new DapperExample();
+dapperExample.Run();*/
+
+EFCoreExample eFCoreExample = new EFCoreExample();
+eFCoreExample.Run();
 
 Console.ReadKey();

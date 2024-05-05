@@ -14,7 +14,8 @@ namespace TWLDotNetCore.ConsoleApp
              DataSource = "LAPTOP-LF5BIQ5E", // server name
              InitialCatalog = "DotNetTraining", // database name
              UserID = "sa",
-             Password = "twl@123"
+             Password = "twl@123",
+             TrustServerCertificate = true,
          };
 }
 }
