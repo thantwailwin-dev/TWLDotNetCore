@@ -6,12 +6,14 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TWLDotNetCore.ConsoleApp.Dtos;
+using TWLDotNetCore.ConsoleApp.Services;
 
-namespace TWLDotNetCore.ConsoleApp
+namespace TWLDotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
-        public void Run() 
+        public void Run()
         {
             /*Read();
             Edit(1);
@@ -26,7 +28,7 @@ namespace TWLDotNetCore.ConsoleApp
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             List<BlogDto> lst = db.Query<BlogDto>("select * from tbl_blog").ToList();
 
-            foreach(BlogDto item in lst)
+            foreach (BlogDto item in lst)
             {
                 Console.WriteLine(item.BlogId);
                 Console.WriteLine(item.BlogTitle);
@@ -54,7 +56,7 @@ namespace TWLDotNetCore.ConsoleApp
             Console.WriteLine("--------------------------");
         }
 
-        private void Create(string title,string author,string content)
+        private void Create(string title, string author, string content)
         {
             var item = new BlogDto
             {
@@ -72,7 +74,7 @@ namespace TWLDotNetCore.ConsoleApp
            ,@BlogAuthor
            ,@BlogContent)";
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int result = db.Execute(query,item);
+            int result = db.Execute(query, item);
 
             string message = result > 0 ? "Saving Success!" : "Saving Failed!";
             Console.WriteLine(message);
@@ -80,7 +82,7 @@ namespace TWLDotNetCore.ConsoleApp
 
         }
 
-        private void Update(int id,string title, string author, string content)
+        private void Update(int id, string title, string author, string content)
         {
             var item = new BlogDto
             {
@@ -109,7 +111,7 @@ namespace TWLDotNetCore.ConsoleApp
         {
             var item = new BlogDto
             {
-                BlogId = id                
+                BlogId = id
 
             };
             string query = @"delete from Tbl_Blog where BlogId = @BlogId";

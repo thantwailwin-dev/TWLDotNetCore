@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TWLDotNetCore.ConsoleApp.Dtos;
 
-namespace TWLDotNetCore.ConsoleApp
+namespace TWLDotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {
-       private readonly AppDbContext db = new AppDbContext();
+        private readonly AppDbContext db = new AppDbContext();
         public void Run()
         {
             /* Read();*/
@@ -21,8 +22,8 @@ namespace TWLDotNetCore.ConsoleApp
 
         private void Read()
         {
-            
-            var lst =  db.Blogs.ToList();
+
+            var lst = db.Blogs.ToList();
 
             foreach (BlogDto item in lst)
             {

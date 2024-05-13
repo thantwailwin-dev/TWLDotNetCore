@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TWLDotNetCore.ConsoleApp
+namespace TWLDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
@@ -44,7 +44,7 @@ namespace TWLDotNetCore.ConsoleApp
             }
         }
 
-        public void Create(string title,string author,string content)
+        public void Create(string title, string author, string content)
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
 
@@ -143,5 +143,5 @@ namespace TWLDotNetCore.ConsoleApp
 
 
 
-   
+
 }

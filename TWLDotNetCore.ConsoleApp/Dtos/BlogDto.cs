@@ -6,16 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TWLDotNetCore.ConsoleApp;
+namespace TWLDotNetCore.ConsoleApp.Dtos;
 
 [Table("Tbl_Blog")]
 public class BlogDto
 {
-    [Key] 
+    [Key]
     public int BlogId { get; set; }
     public string BlogTitle { get; set; }
     public string BlogAuthor { get; set; }
     public string BlogContent { get; set; }
 }
 
-public record BlogEntity(int BlogId,string BlogTitle,string BlogAuthor,string BlogContent);
+public record BlogEntity(int BlogId, string BlogTitle, string BlogAuthor, string BlogContent);
