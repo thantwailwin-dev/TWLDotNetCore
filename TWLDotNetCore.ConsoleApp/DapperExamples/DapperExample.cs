@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TWLDotNetCore.ConsoleApp.Dtos;
+using TWLDotNetCore.ConsoleApp.Service;
 using TWLDotNetCore.ConsoleApp.Services;
 
 namespace TWLDotNetCore.ConsoleApp.DapperExamples
