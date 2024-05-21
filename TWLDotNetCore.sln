@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.RestApi", "TWLDotNetCore.RestApi\TWLDotNetCore.RestApi.csproj", "{B0C28240-CEA1-4930-8979-7A61405DF548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.RestApi", "TWLDotNetCore.RestApi\TWLDotNetCore.RestApi.csproj", "{B0C28240-CEA1-4930-8979-7A61405DF548}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
