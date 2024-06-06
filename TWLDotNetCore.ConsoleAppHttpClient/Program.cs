@@ -1,17 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Newtonsoft.Json;
+using Newtonsoft.Json;  /*JSON <=> C# - Package(NewtonSoft.json)*/
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Burma Project Idea JSON data to API");
+
 string jsonStr = await File.ReadAllTextAsync("data.json");
-var model = JsonConvert.DeserializeObject<MainDto>(jsonStr);
+/*Console.WriteLine(jsonStr);*/
 
+var model = JsonConvert.DeserializeObject<MainDto>(jsonStr);
 foreach(var question in model.questions)
 {
-    Console.WriteLine(question.questionName);
+    Console.WriteLine(question.questionNo);
 }
 
-Console.WriteLine(jsonStr);
-/*JSON <=> C# - Package(NewtonSoft.json)*/
 Console.ReadLine();
 
 
