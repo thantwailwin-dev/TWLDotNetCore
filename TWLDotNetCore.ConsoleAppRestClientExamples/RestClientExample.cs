@@ -71,7 +71,7 @@ namespace TWLDotNetCore.ConsoleAppRestClientExamples
 
         private async Task DeleteAsync(int id)
         {
-            RestRequest restRequest = new RestRequest($"{_blogEndpoint}/{id}", Method.Get);
+            RestRequest restRequest = new RestRequest($"{_blogEndpoint}/{id}", Method.Delete);
             var response = await _client.ExecuteAsync(restRequest);
 
             if (response.IsSuccessStatusCode)

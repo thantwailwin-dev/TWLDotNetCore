@@ -17,9 +17,11 @@ namespace TWLDotNetCore.ConsoleAppHttpClientExamples
             /*await ReadAsync();*/
             /*await EditAsync(1);
             await EditAsync(100);*/
-            /*await CreateAsync("asdf","asdf","jkl");*/
-            await UpdateAsync(30,"asdf3", "asdf5", "jkl9");
-            await EditAsync(30);
+            await DeleteAsync(30);
+            await ReadAsync();
+            /*await CreateAsync("asdf17", "asdf17", "jkl17");*/
+            /*await UpdateAsync(30,"asdf3", "asdf5", "jkl9");
+            await EditAsync(30);*/
         }
         private async Task ReadAsync()
         {            
@@ -29,7 +31,7 @@ namespace TWLDotNetCore.ConsoleAppHttpClientExamples
             {
                 string jsonStr = await response.Content.ReadAsStringAsync();
                 /*Console.WriteLine(jsonStr);*/
-            List<BlogDto> lst = JsonConvert.DeserializeObject<List<BlogDto>>(jsonStr)!;
+                List<BlogDto> lst = JsonConvert.DeserializeObject<List<BlogDto>>(jsonStr)!;
                 foreach (var item in lst)
                 {
                     Console.WriteLine(JsonConvert.SerializeObject(item));
@@ -65,7 +67,7 @@ namespace TWLDotNetCore.ConsoleAppHttpClientExamples
 
         private async Task DeleteAsync(int id)
         {
-            var response = await _client.GetAsync($"{_blogEndpoint}/{id}");
+            var response = await _client.DeleteAsync($"{_blogEndpoint}/{id}");
 
             if (response.IsSuccessStatusCode)
             {
