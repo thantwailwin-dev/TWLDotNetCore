@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.ConsoleAppHtt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.ConsoleAppHttpClientExamples", "TWLDotNetCore.ConsoleAppHttpClientExamples\TWLDotNetCore.ConsoleAppHttpClientExamples.csproj", "{1C0F4C61-BBF4-40AB-A6CE-6562219A77A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.ConsoleAppRestClientExamples", "TWLDotNetCore.ConsoleAppRestClientExamples\TWLDotNetCore.ConsoleAppRestClientExamples.csproj", "{088AFBAA-B49B-40F2-A409-5B80B1EECB23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.ConsoleAppRestClientExamples", "TWLDotNetCore.ConsoleAppRestClientExamples\TWLDotNetCore.ConsoleAppRestClientExamples.csproj", "{088AFBAA-B49B-40F2-A409-5B80B1EECB23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.PizzaApi", "TWLDotNetCore.PizzaApi\TWLDotNetCore.PizzaApi.csproj", "{2C72EDC6-754B-45D0-B0AF-15290FDBB67A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{088AFBAA-B49B-40F2-A409-5B80B1EECB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{088AFBAA-B49B-40F2-A409-5B80B1EECB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{088AFBAA-B49B-40F2-A409-5B80B1EECB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C72EDC6-754B-45D0-B0AF-15290FDBB67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C72EDC6-754B-45D0-B0AF-15290FDBB67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C72EDC6-754B-45D0-B0AF-15290FDBB67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C72EDC6-754B-45D0-B0AF-15290FDBB67A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
