@@ -72,7 +72,7 @@ namespace TWLDotNetCore.PizzaApi.Features.Pizza
             return Ok(response);
         }*/
 
-        [HttpGet("Order")]
+        [HttpPost("Order")]
         public async Task<IActionResult> OrderAsync(OrderRequest orderRequest)
         {
             var itemPizza = await _appDbContext.Pizzas.FirstOrDefaultAsync(x => x.Id == orderRequest.PizzaId);
