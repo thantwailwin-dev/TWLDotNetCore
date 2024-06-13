@@ -13,11 +13,18 @@ namespace TWLDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
-        private readonly AppDbContext _context;
+       /* private readonly AppDbContext _context;
 
         public BlogController()
         {
             _context = new AppDbContext();
+        }*/
+
+        private readonly AppDbContext _context;
+
+        public BlogController(AppDbContext context)
+        {
+            _context = context;
         }
 
         [HttpGet]
