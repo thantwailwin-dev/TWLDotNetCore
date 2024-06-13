@@ -18,4 +18,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TWLDotNetCore.Shared\TWLDotNetCore.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
