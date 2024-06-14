@@ -11,8 +11,7 @@ namespace TWLDotNetCore.RestApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class BlogDapperController : ControllerBase
-    {
-        
+    {        
         [HttpGet]
         public IActionResult GetBlogs()
         {
@@ -38,19 +37,18 @@ namespace TWLDotNetCore.RestApi.Controllers
         public IActionResult CreateBlog(BlogModel blog)
         {
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
-           ([BlogTitle]
-           ,[BlogAuthor]
-           ,[BlogContent])
-     VALUES
-           (@BlogTitle
-           ,@BlogAuthor
-           ,@BlogContent)";
+                                   ([BlogTitle]
+                                   ,[BlogAuthor]
+                                   ,[BlogContent])
+                             VALUES
+                                   (@BlogTitle
+                                   ,@BlogAuthor
+                                   ,@BlogContent)";
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             int result = db.Execute(query, blog);
 
             string message = result > 0 ? "Saving Success!" : "Saving Failed!";
             return Ok(message);
-
             }
 
         [HttpPut("{id}")]
@@ -66,10 +64,10 @@ namespace TWLDotNetCore.RestApi.Controllers
             blog.BlogId = id;
 
             string query = @"UPDATE [dbo].[Tbl_Blog]
-   SET [BlogTitle] = @BlogTitle
-      ,[BlogAuthor] = @BlogAuthor
-      ,[BlogContent] = @BlogContent
- WHERE BlogId = @BlogId";
+                             SET [BlogTitle] = @BlogTitle
+                                  ,[BlogAuthor] = @BlogAuthor
+                                  ,[BlogContent] = @BlogContent
+                             WHERE BlogId = @BlogId";
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             int result = db.Execute(query, blog);
 
@@ -111,8 +109,8 @@ namespace TWLDotNetCore.RestApi.Controllers
             blog.BlogId = id;
 
             string query = $@"UPDATE [dbo].[Tbl_Blog]
-   SET {conditions}
- WHERE BlogId = @BlogId";
+                             SET {conditions}
+                             WHERE BlogId = @BlogId";
 
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             int result = db.Execute(query, blog);
@@ -142,7 +140,7 @@ namespace TWLDotNetCore.RestApi.Controllers
 
         private BlogModel? FindById(int id)
         {
-            string query = "select * from tbl_blog where blogid = @BlogId";
+            string query = "select * from Tbl_Blog where BlogId = @BlogId";
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             var item = db.Query<BlogModel>(query, new BlogModel { BlogId = id }).FirstOrDefault();
             return item;

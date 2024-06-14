@@ -53,8 +53,8 @@ namespace TWLDotNetCore.RestApi.Controllers
            (@BlogTitle
            ,@BlogAuthor
            ,@BlogContent)";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int result = db.Execute(query, blog);
+            /*using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);*/
+            int result = _dapperService.Execute(query, blog);
 
             string message = result > 0 ? "Saving Success!" : "Saving Failed!";
             return Ok(message);
@@ -140,18 +140,18 @@ namespace TWLDotNetCore.RestApi.Controllers
             }
 
             string query = @"delete from Tbl_Blog where BlogId = @BlogId";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int result = db.Execute(query, new BlogModel { BlogId = id });
+            /*using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);*/
+            int result = _dapperService.Execute(query, new BlogModel { BlogId = id });
 
             string message = result > 0 ? "Deleting Success!" : "Deleting Failed!";
-            return Ok();
+            return Ok(message);
         }
 
         private BlogModel? FindById(int id)
         {
             string query = "select * from tbl_blog where blogid = @BlogId";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            var item = db.Query<BlogModel>(query, new BlogModel { BlogId = id }).FirstOrDefault();
+            /*using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);*/
+            var item = _dapperService.Query<BlogModel>(query, new BlogModel { BlogId = id }).FirstOrDefault();
             return item;
         }
     }

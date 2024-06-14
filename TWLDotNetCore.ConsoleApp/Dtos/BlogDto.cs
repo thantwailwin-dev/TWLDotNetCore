@@ -18,4 +18,4 @@ public class BlogDto
     public string BlogContent { get; set; }
 }
 
-public record BlogEntity(int BlogId, string BlogTitle, string BlogAuthor, string BlogContent);
+/*public record BlogEntity(int BlogId, string BlogTitle, string BlogAuthor, string BlogContent);*/
