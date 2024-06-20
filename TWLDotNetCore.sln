@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.ConsoleAppRes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.PizzaApi", "TWLDotNetCore.PizzaApi\TWLDotNetCore.PizzaApi.csproj", "{2C72EDC6-754B-45D0-B0AF-15290FDBB67A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.ConsoleAppRefitExamples", "TWLDotNetCore.ConsoleAppRefit\TWLDotNetCore.ConsoleAppRefitExamples.csproj", "{91384108-6E10-40CC-A00A-CFEE701DCAB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.ConsoleAppRefitExamples", "TWLDotNetCore.ConsoleAppRefit\TWLDotNetCore.ConsoleAppRefitExamples.csproj", "{91384108-6E10-40CC-A00A-CFEE701DCAB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.WinFormsApp", "TWLDotNetCore.WinFormsApp\TWLDotNetCore.WinFormsApp.csproj", "{C340431E-36DC-4A73-A1C9-4F1DF28D5975}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{91384108-6E10-40CC-A00A-CFEE701DCAB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91384108-6E10-40CC-A00A-CFEE701DCAB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91384108-6E10-40CC-A00A-CFEE701DCAB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C340431E-36DC-4A73-A1C9-4F1DF28D5975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C340431E-36DC-4A73-A1C9-4F1DF28D5975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C340431E-36DC-4A73-A1C9-4F1DF28D5975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C340431E-36DC-4A73-A1C9-4F1DF28D5975}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
