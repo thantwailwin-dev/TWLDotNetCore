@@ -22,6 +22,12 @@ namespace TWLDotNetCore.WinFormsApp.Queries
                                                           ,[BlogAuthor]
                                                           ,[BlogContent]
                                                     FROM[dbo].[Tbl_Blog]";
+
+        public static string UpdateBlog { get; } = @"UPDATE [dbo].[Tbl_Blog]
+                                                   SET [BlogTitle] = @BlogTitle
+                                                      ,[BlogAuthor] = @BlogAuthor
+                                                      ,[BlogContent] = @BlogContent
+                                                 WHERE BlogId = @BlogId";
     }
 }
 

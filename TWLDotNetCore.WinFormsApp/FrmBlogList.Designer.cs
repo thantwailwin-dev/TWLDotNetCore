@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             dgvData = new DataGridView();
+            colEdit = new DataGridViewButtonColumn();
+            colDelete = new DataGridViewButtonColumn();
             colId = new DataGridViewTextBoxColumn();
             colTitle = new DataGridViewTextBoxColumn();
             colAuthor = new DataGridViewTextBoxColumn();
@@ -42,7 +44,7 @@
             dgvData.AllowUserToDeleteRows = false;
             dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Columns.AddRange(new DataGridViewColumn[] { colId, colTitle, colAuthor, colContent });
+            dgvData.Columns.AddRange(new DataGridViewColumn[] { colEdit, colDelete, colId, colTitle, colAuthor, colContent });
             dgvData.Dock = DockStyle.Fill;
             dgvData.Location = new Point(0, 0);
             dgvData.Name = "dgvData";
@@ -50,6 +52,25 @@
             dgvData.RowHeadersWidth = 51;
             dgvData.Size = new Size(1100, 630);
             dgvData.TabIndex = 0;
+            dgvData.CellContentClick += dgvData_CellContentClick;
+            // 
+            // colEdit
+            // 
+            colEdit.HeaderText = "Edit";
+            colEdit.MinimumWidth = 6;
+            colEdit.Name = "colEdit";
+            colEdit.ReadOnly = true;
+            colEdit.Text = "Edit";
+            colEdit.UseColumnTextForButtonValue = true;
+            // 
+            // colDelete
+            // 
+            colDelete.HeaderText = "Delete";
+            colDelete.MinimumWidth = 6;
+            colDelete.Name = "colDelete";
+            colDelete.ReadOnly = true;
+            colDelete.Text = "Delete";
+            colDelete.UseColumnTextForButtonValue = true;
             // 
             // colId
             // 
@@ -58,7 +79,6 @@
             colId.MinimumWidth = 6;
             colId.Name = "colId";
             colId.ReadOnly = true;
-            colId.Visible = false;
             // 
             // colTitle
             // 
@@ -103,6 +123,8 @@
         #endregion
 
         private DataGridView dgvData;
+        private DataGridViewButtonColumn colEdit;
+        private DataGridViewButtonColumn colDelete;
         private DataGridViewTextBoxColumn colId;
         private DataGridViewTextBoxColumn colTitle;
         private DataGridViewTextBoxColumn colAuthor;

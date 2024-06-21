@@ -36,6 +36,7 @@
             label3 = new Label();
             btnCancel = new Button();
             btnSave = new Button();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
             // txtTitle
@@ -93,7 +94,7 @@
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.ForeColor = SystemColors.Control;
-            btnCancel.Location = new Point(489, 489);
+            btnCancel.Location = new Point(415, 489);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(105, 41);
             btnCancel.TabIndex = 6;
@@ -107,7 +108,7 @@
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.ForeColor = SystemColors.Control;
-            btnSave.Location = new Point(632, 489);
+            btnSave.Location = new Point(566, 489);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(96, 41);
             btnSave.TabIndex = 7;
@@ -115,12 +116,28 @@
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.SeaGreen;
+            btnUpdate.FlatAppearance.BorderSize = 0;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.ForeColor = SystemColors.Control;
+            btnUpdate.Location = new Point(566, 489);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(96, 41);
+            btnUpdate.TabIndex = 8;
+            btnUpdate.Text = "&Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Visible = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // FrmBlog
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(1200, 675);
+            Controls.Add(btnUpdate);
             Controls.Add(btnSave);
             Controls.Add(btnCancel);
             Controls.Add(label3);
@@ -133,8 +150,7 @@
             Margin = new Padding(5, 4, 5, 4);
             Name = "FrmBlog";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Blog";
-            Load += FrmBlog_Load;
+            Text = "Blog";            
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,5 +165,6 @@
         private Label label3;
         private Button btnCancel;
         private Button btnSave;
+        private Button btnUpdate;
     }
 }

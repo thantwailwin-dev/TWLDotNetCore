@@ -1,3 +1,5 @@
+using System.Data.SqlClient;
+using System.Data;
 using System.Drawing.Text;
 using TWLDotNetCore.Shared;
 using TWLDotNetCore.WinFormsApp.Models;
@@ -8,6 +10,7 @@ namespace TWLDotNetCore.WinFormsApp
     public partial class FrmBlog : Form
     {
         private readonly DapperService _dapperService;
+        private readonly int _blogId;
 
         public FrmBlog()
         {
@@ -15,10 +18,21 @@ namespace TWLDotNetCore.WinFormsApp
             _dapperService = new DapperService(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        public FrmBlog(int blogId)
         {
-            ClearForm();
-        }
+            InitializeComponent();
+            _blogId = blogId;
+            _dapperService = new DapperService(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+
+            var model = _dapperService.QueryFirstOrDefault<BlogModel>("select * from tbl_blog where BlogId = @BlogId", new { BlogId = _blogId });
+
+            txtTitle.Text = model.BlogTitle;
+            txtAuthor.Text = model.BlogAuthor;
+            txtContent.Text = model.BlogContent;
+
+            btnSave.Visible = false;
+            btnUpdate.Visible = true;
+        }        
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -43,6 +57,36 @@ namespace TWLDotNetCore.WinFormsApp
 
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var item = new BlogModel
+                {
+                    BlogId = _blogId,
+                    BlogTitle = txtTitle.Text.Trim(),
+                    BlogAuthor = txtAuthor.Text.Trim(),
+                    BlogContent = txtContent.Text.Trim()
+
+                };
+
+                int result = _dapperService.Execute(BlogQuery.UpdateBlog, item);
+                string message = result > 0 ? "Updating Success!" : "Updating Failed!";
+                MessageBox.Show(message);
+                this.Close();   
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+        }
+
         private void ClearForm()
         {
             txtTitle.Clear();
@@ -50,11 +94,8 @@ namespace TWLDotNetCore.WinFormsApp
             txtContent.Clear();
 
             txtTitle.Focus();
-        }
+        }   
 
-        private void FrmBlog_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
