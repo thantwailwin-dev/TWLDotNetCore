@@ -16,5 +16,12 @@ namespace TWLDotNetCore.WinFormsApp.Queries
                                    (@BlogTitle
                                    ,@BlogAuthor
                                    ,@BlogContent)";
+
+        public static string SelectBlog { get; } = @"SELECT[BlogId]
+                                                          ,[BlogTitle]
+                                                          ,[BlogAuthor]
+                                                          ,[BlogContent]
+                                                    FROM[dbo].[Tbl_Blog]";
     }
 }
+

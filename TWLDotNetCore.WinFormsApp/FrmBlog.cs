@@ -7,10 +7,10 @@ namespace TWLDotNetCore.WinFormsApp
 {
     public partial class FrmBlog : Form
     {
-        private readonly DapperService _dapperService;      
+        private readonly DapperService _dapperService;
 
         public FrmBlog()
-        {            
+        {
             InitializeComponent();
             _dapperService = new DapperService(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
         }
@@ -41,8 +41,8 @@ namespace TWLDotNetCore.WinFormsApp
                 MessageBox.Show(ex.ToString());
             }
 
-        } 
-        
+        }
+
         private void ClearForm()
         {
             txtTitle.Clear();
@@ -51,6 +51,10 @@ namespace TWLDotNetCore.WinFormsApp
 
             txtTitle.Focus();
         }
-        
+
+        private void FrmBlog_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

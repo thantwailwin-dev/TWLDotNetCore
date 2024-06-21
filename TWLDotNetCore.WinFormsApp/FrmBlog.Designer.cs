@@ -133,7 +133,8 @@
             Margin = new Padding(5, 4, 5, 4);
             Name = "FrmBlog";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Blog";            
+            Text = "Blog";
+            Load += FrmBlog_Load;
             ResumeLayout(false);
             PerformLayout();
         }
