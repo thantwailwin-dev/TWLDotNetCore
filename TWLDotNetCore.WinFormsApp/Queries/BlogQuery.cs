@@ -28,6 +28,9 @@ namespace TWLDotNetCore.WinFormsApp.Queries
                                                       ,[BlogAuthor] = @BlogAuthor
                                                       ,[BlogContent] = @BlogContent
                                                  WHERE BlogId = @BlogId";
+
+        public static string DeleteBlog { get; } = @"DELETE FROM[dbo].[Tbl_Blog]
+                                                    WHERE BlogId = @BlogId";
     }
 }
 

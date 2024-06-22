@@ -47,11 +47,12 @@ namespace TWLDotNetCore.WinFormsApp
 
             if (e.RowIndex == -1) return;
 
+            #region if
+
             var blogId = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells["colId"].Value);
 
             if (e.ColumnIndex == (int)EnumFormControlType.Edit)
-            {
-                
+            {                
                 FrmBlog frm = new FrmBlog(blogId);
                 frm.ShowDialog();
                 BlogList();
@@ -63,6 +64,35 @@ namespace TWLDotNetCore.WinFormsApp
                 
                 DeleteBlog(blogId);                                
             }
+
+            #endregion
+
+            #region Switch Case
+
+            /*int index = e.ColumnIndex;
+            EnumFormControlType enumFormControlType = (EnumFormControlType)index;
+
+            switch (enumFormControlType)
+            {
+                
+                case EnumFormControlType.Edit:
+                    FrmBlog frm = new FrmBlog(blogId);
+                    frm.ShowDialog();
+                    BlogList();
+                    break;
+                case EnumFormControlType.Delete:
+                    var dialogResult = MessageBox.Show("Are you sure want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult != DialogResult.Yes) return;
+
+                    DeleteBlog(blogId);
+                    break;
+                case EnumFormControlType.None:                
+                default:
+                    MessageBox.Show("Invalid Case.");
+                    break;
+            }*/
+
+            #endregion
 
             /*EnumFormControlType enumFormControlType = EnumFormControlType.None;
             switch (enumFormControlType)
@@ -79,9 +109,8 @@ namespace TWLDotNetCore.WinFormsApp
         }
 
         private void DeleteBlog(int id)
-        {
-            string query = @"delete from Tbl_Blog where BlogId = @BlogId";
-            int result = _dapperService.Execute(query, new { BlogId = id });
+        {            
+            int result = _dapperService.Execute(BlogQuery.DeleteBlog, new { BlogId = id });
 
             string message = result > 0 ? "Deleting Success!" : "Deleting Failed!";
             MessageBox.Show(message);
