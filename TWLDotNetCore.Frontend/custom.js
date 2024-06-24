@@ -6,18 +6,71 @@ function uuidv4() {
 
 function successMessage(message) {
     // alert(message);
-    Swal.fire({
-        title: "Show Message!",
-        text: "You clicked the button!",
-        icon: message
-    });
+
+    // Swal.fire({
+    //     title: "Success!",
+    //     text: message,
+    //     icon: "success"
+    // });
+
+    Notiflix.Report.success(
+        'Success!',
+        message,
+        'Ok',
+    );
 }
 
 function errorMessage(message) {
     // alert(message);
-    Swal.fire({
-        title: "Show Message!",
-        text: "You clicked the button!",
-        icon: message
+
+    // Swal.fire({
+    //     title: "Error!",
+    //     text: message,
+    //     icon: "error"
+    // });
+
+    Notiflix.Report.failure(
+        'Error!',
+        message,
+        'Ok',
+    );
+}
+
+function confirmMessage(message) {
+    // let confirmMessageResult = new Promise(function (success, error) {
+    //     // "Producing Code" (May take some time)
+
+    //     Swal.fire({
+    //         title: "Confirm",
+    //         text: message,
+    //         icon: "warning",
+    //         showCancelButton: true,
+    //         confirmButtonText: "Yes"
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
+    //             success(); // when successful
+    //         } else {
+    //             error();  // when error
+    //         }
+    //     });
+    // });
+    // return confirmMessageResult;
+
+    let confirmMessageResult = new Promise(function (success, error) {
+        // "Producing Code" (May take some time)
+
+        Notiflix.Confirm.show(
+            'Confirm',
+            message,
+            'Yes',
+            'No',
+            function okCb() {
+                success(); // when successful
+            },
+            function cancelCb() {
+                error();  // when error
+            }
+        );
     });
+    return confirmMessageResult;
 }
