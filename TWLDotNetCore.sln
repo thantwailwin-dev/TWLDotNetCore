@@ -29,13 +29,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.ConsoleAppRef
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.WinFormsApp", "TWLDotNetCore.WinFormsApp\TWLDotNetCore.WinFormsApp.csproj", "{C340431E-36DC-4A73-A1C9-4F1DF28D5975}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.WinFormsAppSqlInjection", "TWLDotNetCore.WinFormsAppSqlInjection\TWLDotNetCore.WinFormsAppSqlInjection.csproj", "{CC645DBF-839B-4397-A819-09BA796FDF7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.WinFormsAppSqlInjection", "TWLDotNetCore.WinFormsAppSqlInjection\TWLDotNetCore.WinFormsAppSqlInjection.csproj", "{CC645DBF-839B-4397-A819-09BA796FDF7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.NLayer.UI", "TWLDotNetCore.NLayer.UI\TWLDotNetCore.NLayer.UI.csproj", "{86854FDC-35CC-490B-B6CF-B600096EA108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.NLayer.UI", "TWLDotNetCore.NLayer.UI\TWLDotNetCore.NLayer.UI.csproj", "{86854FDC-35CC-490B-B6CF-B600096EA108}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.NLayer.DataAccess", "TWLDotNetCore.NLayer.DataAccess\TWLDotNetCore.NLayer.DataAccess.csproj", "{D6C7AB59-F59C-41A1-9537-B7403FBA584E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.NLayer.DataAccess", "TWLDotNetCore.NLayer.DataAccess\TWLDotNetCore.NLayer.DataAccess.csproj", "{D6C7AB59-F59C-41A1-9537-B7403FBA584E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.NLayer.BusinessLogic", "TWLDotNetCore.NLayer.BusinessLogic\TWLDotNetCore.NLayer.BusinessLogic.csproj", "{B1945735-753F-44D8-BE0D-7BE9A1C3362C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.NLayer.BusinessLogic", "TWLDotNetCore.NLayer.BusinessLogic\TWLDotNetCore.NLayer.BusinessLogic.csproj", "{B1945735-753F-44D8-BE0D-7BE9A1C3362C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.MinimalApi", "TWLDotNetCore.MinimalApi\TWLDotNetCore.MinimalApi.csproj", "{B018A466-77C8-4FFA-98B5-7812EFE861B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{B1945735-753F-44D8-BE0D-7BE9A1C3362C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1945735-753F-44D8-BE0D-7BE9A1C3362C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1945735-753F-44D8-BE0D-7BE9A1C3362C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B018A466-77C8-4FFA-98B5-7812EFE861B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B018A466-77C8-4FFA-98B5-7812EFE861B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B018A466-77C8-4FFA-98B5-7812EFE861B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B018A466-77C8-4FFA-98B5-7812EFE861B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

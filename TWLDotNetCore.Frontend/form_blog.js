@@ -204,9 +204,7 @@ function deleteBlog3(id) {
             localStorage.setItem(tblBlog, jsonBlog);
 
             successMessage("success");
-
             getBlogTable();
-
         
     });
 
