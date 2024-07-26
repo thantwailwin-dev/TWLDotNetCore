@@ -22,7 +22,6 @@ namespace TWLDotNetCore.RestApiWithNLayer.Features.MyanmarProverbs
             string jsonStr = await System.IO.File.ReadAllTextAsync("MyanmarProverbs.json");
             var model = JsonConvert.DeserializeObject<Tbl_Mmproverbs>(jsonStr);
             return model;
-
         }
 
         [HttpGet]
