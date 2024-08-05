@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.NLayer.DataAc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.NLayer.BusinessLogic", "TWLDotNetCore.NLayer.BusinessLogic\TWLDotNetCore.NLayer.BusinessLogic.csproj", "{B1945735-753F-44D8-BE0D-7BE9A1C3362C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.MinimalApi", "TWLDotNetCore.MinimalApi\TWLDotNetCore.MinimalApi.csproj", "{B018A466-77C8-4FFA-98B5-7812EFE861B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TWLDotNetCore.MinimalApi", "TWLDotNetCore.MinimalApi\TWLDotNetCore.MinimalApi.csproj", "{B018A466-77C8-4FFA-98B5-7812EFE861B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TWLDotNetCore.PizzaOrder", "TWLDotNetCore.PizzaOrder\TWLDotNetCore.PizzaOrder.csproj", "{BA2DA2DA-C0C3-4F3E-B877-42ABE6072281}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{B018A466-77C8-4FFA-98B5-7812EFE861B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B018A466-77C8-4FFA-98B5-7812EFE861B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B018A466-77C8-4FFA-98B5-7812EFE861B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2DA2DA-C0C3-4F3E-B877-42ABE6072281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2DA2DA-C0C3-4F3E-B877-42ABE6072281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2DA2DA-C0C3-4F3E-B877-42ABE6072281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2DA2DA-C0C3-4F3E-B877-42ABE6072281}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
